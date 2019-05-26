@@ -103,6 +103,7 @@ class PowerWord:
             print('get_ciba_info:', e)
             return None
     
+    def 
 
 if __name__ == "__main__":
     w = Weather(WeatherConfig)
