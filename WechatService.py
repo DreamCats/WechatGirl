@@ -7,15 +7,20 @@ from yaml import load
 import time
 from datetime import datetime
 from CityInfo import city_dict
+from pyquery import PyQuery as pq
 
 '''基本配置'''
 class BaseConfig:
+    # 定时
+    alarm_min = '7:30'
+    alarm_max = '8:30'
 
     # 女友信息
     girl_infos = {
         'girl_name':'xxx',
         'girl_city':'成都',
     }
+
     pass
 
 class WeatherConfig:
@@ -103,13 +108,31 @@ class PowerWord:
             print('get_ciba_info:', e)
             return None
     
-    def 
+    def get_dictum_info(self):
+        ''' 获取格言信息（从『一个。one』获取信息 http://wufazhuce.com/）
+        :return: msg
+        '''
+        try:
+            res = self.s.get(url=self.config.dictum_url, headers=self.config.headers)
+            if res.status_code == 200:
+                doc = pq(res.text)
+                today_dictum = doc('.fp-one-cita').eq(0).text()
+                return today_dictum + '\n'
+            else:
+                return None
+        except Exception as e:
+            print('get_dictum_info:', e)
+            return None
+
+
+
 
 if __name__ == "__main__":
     w = Weather(WeatherConfig)
     w.get_weather_info()
 
     ciba = PowerWord(PowerWordConfig)
-    msg = ciba.get_ciba_info()
-    print(msg)
+    ciba_msg = ciba.get_ciba_info()
+    dictum_msg = ciba.get_dictum_info()
+
     # print(wc.girl_city_code)
