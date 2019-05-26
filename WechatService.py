@@ -17,11 +17,11 @@ class BaseConfig:
     alarm_minute = '30'
     # 女友信息
     girl_infos = {
-        'girl_name':'xxx',
-        'girl_city':'成都',
+        'girl_name':'xxx', # 女朋友名字 很重要
+        'girl_city':'成都', # 女朋友位置
         'sweet_words':'追梦直到永远！',
-        'start_date':'2015-10-10',
-        'name_uuid':''
+        'start_date':'2015-10-10', # 和女朋友什么时候在一起的
+        'name_uuid':'' # 可以为空
     }
     
     # 选择词霸还是dictum

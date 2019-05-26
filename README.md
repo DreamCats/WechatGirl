@@ -12,10 +12,16 @@
 ### 2019.5.26
 #### 1. 创建文件结构
 #### 2. 创建WechatService.py文件
+#### 3. 创建run文件
+#### 4. 测试完毕
 
+
+## config
+- WechatService配置一些信息
 
 ## Install
-
+- `python install -r requirements.txt`
+- `python run.py`
 
 
 
