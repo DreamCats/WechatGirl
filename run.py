@@ -5,7 +5,6 @@
 from UserAPI import UserAPI
 from config import BaseConfig
 from apscheduler.schedulers.blocking import BlockingScheduler
-from EveryDayAPI import EveryDayAPI
 
 def run():
     '''主程序入口
