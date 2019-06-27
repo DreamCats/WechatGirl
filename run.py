@@ -2,13 +2,11 @@
 # __file_name__: run.py
 # __time__: 2019:05:26:19:11
 
-
-# from WechatService import BaseConfig, UserLogin
 from UserAPI import UserAPI
 from config import BaseConfig
 from apscheduler.schedulers.blocking import BlockingScheduler
 from EveryDayAPI import EveryDayAPI
-import itchat
+
 def run():
     '''主程序入口
     '''
