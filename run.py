@@ -22,12 +22,12 @@ def run():
     # 定时任务
     scheduler = BlockingScheduler()
     # 每天9：30左右给女朋友发送每日一句
-    # scheduler.add_job(d.start_today_info, 
-    #                 'cron', 
-    #                 hour=self.config.alarm_hour, 
-    #                 minute=self.config.alarm_minute)
+    scheduler.add_job(user.send, 
+                    'cron', 
+                    hour=config.alarmHour, 
+                    minute=config.alarmMinute)
     # 每隔2分钟发送一条数据用于测试。
-    scheduler.add_job(user.send, 'interval', seconds=30)
+    # scheduler.add_job(user.send, 'interval', seconds=30)
     scheduler.start()
 
 
