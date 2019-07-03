@@ -13,7 +13,7 @@ def run():
     user = UserAPI(config)
     
     # 自动登陆
-    if not user.is_online(auto_login=True):
+    if not user.is_online():
         return
  
     # 定时任务
