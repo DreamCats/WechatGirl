@@ -1,5 +1,5 @@
 # __author__: Mai feng
-# __file_name__: WechatService.py
+# __file_name__: UserAPI.py
 # __time__: 2019:05:26:16:12
 import itchat
 import time
@@ -16,7 +16,7 @@ class UserAPI:
         self.girlName = self.config.girlInfos['girlName']
         pass
 
-    def is_online(self, auto_login=False):
+    def is_online(self):
         '''判断是否还在线
         :param auto_login:True,如果掉线了则自动登录。
         :return: True ，还在线，False 不在线了
