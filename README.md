@@ -20,11 +20,14 @@
 
 
 ## config
-- WechatService配置一些信息
+- config配置一些信息
 
 ## Install
 - `python install -r requirements.txt`
 - `python run.py`
+
+## 注意
+- python3.6以上的版本
 
 
 
