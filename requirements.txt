@@ -7,7 +7,7 @@ idna==2.8
 isort==4.3.20
 itchat==1.3.10
 lazy-object-proxy==1.4.1
-lxml==4.3.3
+lxml==4.6.2
 mccabe==0.6.1
 pylint==2.3.1
 pypng==0.0.19
